@@ -1,5 +1,5 @@
 ---
-title: etcd Operator Tutorial to create an instance of Elastic Search cluster
+title: Tutorial to create an instance of Elastic Search cluster
 description: This tutorial explains how to create an instance of Elastic Search cluster
 ---
 
