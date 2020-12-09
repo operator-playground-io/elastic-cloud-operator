@@ -8,25 +8,25 @@
          "description":" About Elastic Cloud Operator",
          "duration":"10 min",
          "tutorial_name":"elastic-cloud-operator-tutorial.md",
-         "title":"etcd Operator"
+         "title":"Elastic Cloud Operator"
       },
       {
          "description":"A User Guide to create an instance of Elastic Search cluster",
          "duration":"30 min",
-         "tutorial_name":"create_elastic_search_cluster_instance.md",
-         "title":"Tutorial to Create instance of Elastic Search cluster "
+         "tutorial_name":"deploy_kibana_instance.md",
+         "title":"Kibana Instance deployment "
       },
       {
-         "description":"Add Users and Enable Authentication",
+         "description":"Tutorial to create an instance of Kibana and associate it with Elasticsearch Cluster",
          "duration":"30 min",
-         "tutorial_name":"add_user_enable_auth.md",
-         "title":"How to Add Users and Enable Authentication"
+         "tutorial_name":"deploy_kibana_instance.md",
+         "title":"Kibana Instance deployment"
       },
       {
-         "description":"How to resize an etcd cluster",
+         "description":"How to upgrade deployment",
          "duration":"30 min",
-         "tutorial_name":"resize_etcd_cluster_tutorial.md",
-         "title":"Resize etcd cluster"
+         "tutorial_name":"upgrade_your_deployment.md",
+         "title":"Upgrade Deployment"
       }
       
    ],
