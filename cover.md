@@ -15,7 +15,7 @@ Current features:
 
 To create elastic-cloud user need to install olm and deploy elastic cloud operator on kubernetes. elastic cloud operator is used to create instances and with help of kibana we can access elastic cloud. This instances will be used by external applications
 
-![](_attachments/eck_arch.png)
+![](_images/eck_arch.png)
 
 
 Supported versions:
