@@ -91,10 +91,13 @@ NAME                     TYPE       CLUSTER-IP     EXTERNAL-IP   PORT(S)        
 kibanainstance-kb-http   NodePort   10.96.67.171   <none>        5601:30449/TCP   7m42s
 ```
 
-You need to login as the **elastic** user via browser access and The password can be obtained with the following command:
+You need to login as the **elastic** user via browser access .
+Execute below commands to view the username and password:
 
 ```execute
-kubectl get secret elasticsearch-es-elastic-user -n operators -o=jsonpath='{.data.elastic}' | base64 --decode; echo
+export password=`kubectl get secret elasticsearch-es-elastic-user -n operators -o=jsonpath='{.data.elastic}' | base64 --decode; echo`
+echo "User: elastic"
+echo "Password: $password"
 ```
 
 Click on the <a href="https://##DNS.ip##:30449" target="_blank">https://##DNS.ip##:30449</a> to access Kibana Dashboard
