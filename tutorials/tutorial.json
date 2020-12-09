@@ -5,10 +5,10 @@
    "footer":"footer.md",
    "tutorials":[
       {
-         "description":" About Elastic Cloud Operator",
+         "description":" This tutorial explains check deployment status of elastic cloud operator",
          "duration":"10 min",
          "tutorial_name":"elastic-cloud-operator-tutorial.md",
-         "title":"Elastic Cloud Operator"
+         "title":"Elastic Cloud Operator Status Check"
       },
       {
          "description":"A User Guide to create an instance of Elastic Search cluster",
