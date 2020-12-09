@@ -21,12 +21,6 @@
          "duration":"30 min",
          "tutorial_name":"deploy_kibana_instance.md",
          "title":"Kibana Instance deployment"
-      },
-      {
-         "description":"How to upgrade deployment",
-         "duration":"30 min",
-         "tutorial_name":"upgrade_your_deployment.md",
-         "title":"Upgrade Deployment"
       }
       
    ],
