@@ -1,0 +1,40 @@
+{
+   "name":"Elastic Cloud Operator Tutorial",
+   "appLayout":"accordion",
+   "appTheme":"g90",
+   "footer":"footer.md",
+   "tutorials":[
+      {
+         "description":" A User Guide for Elastic Cloud Operator",
+         "duration":"30 min",
+         "tutorial_name":"etcd-operator-tutorial.md",
+         "title":"etcd Operator"
+      },
+      {
+         "description":"A User Guide to create an instance of etcd cluster",
+         "duration":"30 min",
+         "tutorial_name":"create_instance_of_etcd_cluster.md",
+         "title":"Tutorial to Create instance of etcd cluster "
+      },
+      {
+         "description":"Add Users and Enable Authentication",
+         "duration":"30 min",
+         "tutorial_name":"add_user_enable_auth.md",
+         "title":"How to Add Users and Enable Authentication"
+      },
+      {
+         "description":"How to resize an etcd cluster",
+         "duration":"30 min",
+         "tutorial_name":"resize_etcd_cluster_tutorial.md",
+         "title":"Resize etcd cluster"
+      }
+      
+   ],
+   "usefulLinks":[
+      {
+         "title":"Elastic Cloud Operator",
+         "description":"Elastic Cloud Operator ",
+         "url":"https://operatorhub.io/operator/elastic-cloud-eck"
+      }
+   ]
+}
