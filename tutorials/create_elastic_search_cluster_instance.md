@@ -5,7 +5,7 @@ description: This tutorial explains how to create an instance of Elastic Search 
 
 ### Create Instance of Elastic Search Cluster
 
-# Create PV before creating the instance 
+#### Create PV before creating the instance 
 
 ```execute
 cat <<'EOF' >>elastic_pv.yaml
@@ -24,12 +24,12 @@ spec:
     path: "/mnt/data"
 EOF
 ```
-# Execute below command to create the PV
+#### Execute below command to create the PV
 
 ```execute
 kubectl create -f elastic_pv.yaml -n operators
 ```
-# Execute below command to create yaml file
+#### Execute below command to create yaml file
 
 ```execute
 cat <<'EOF' >>elasticsearch_cluster.yaml
@@ -52,7 +52,7 @@ EOF
 
 This small specification causes the operator to deploy a single node Elasticsearch cluster named ElasticSearch . The cluster will automatically have all its communications secured using Transport Layer Security (TLS)
 
-# Execute below command to create cluster
+#### Execute below command to create cluster
 
 ```execute
 kubectl create -f elasticsearch_cluster.yaml -n operators
@@ -60,7 +60,7 @@ kubectl create -f elasticsearch_cluster.yaml -n operators
 
 The operator automatically creates and manages Kubernetes resources to achieve the desired state of the Elasticsearch cluster. 
 
-# Execute below command to get status of pods
+#### Execute below command to get status of pods
 
 ```execute
 kubectl get pods -n operators | egrep -i "name|elasticsearch"
@@ -69,7 +69,7 @@ kubectl get pods -n operators | egrep -i "name|elasticsearch"
 
 It may take up to a few minutes until all the resources are created and the cluster is ready for use. Status should be `running` and READY should be `1/1` .
 
-# Execute below command to check the health of current ElasticSearch Cluster
+#### Execute below command to check the health of current ElasticSearch Cluster
 
 ```execute
 kubectl get elasticsearch -n operators
@@ -92,7 +92,7 @@ kubectl logs -f elasticsearch-es-default-0 -n operators | more
 ```
 
 
-# Get the credentials
+#### Get the credentials
 
 A default user named elastic is automatically created with the password stored in a Kubernetes secret:
 
@@ -106,7 +106,7 @@ You will find output similar below:
 fdqxb7j68pfvj....
 ```
 
-# Request the Elasticsearch endpoint
+#### Request the Elasticsearch endpoint
 
 From inside the Kubernetes cluster:
 
