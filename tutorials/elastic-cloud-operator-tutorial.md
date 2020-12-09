@@ -1,5 +1,5 @@
 ---
-title: Elastic Cloud Operator Tutorial
+title: Elastic Cloud Operator Status Check
 
 description: This tutorial explains check deployment status of elastic cloud operator
 ---
