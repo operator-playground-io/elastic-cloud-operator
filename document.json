@@ -1,0 +1,35 @@
+{
+  "name": "Elastic Cloud Operator",
+  "description": "Elastic Cloud Operator",
+  "logo": "_images/SalesStack.png",
+  "has_supporting_content": true,
+  "stack_id": "elastic-cloud-operator",
+  "type": "stack",
+  "categories": ["Database"],
+  "platform": "Kubernetes",
+  "cover": "cover.md",
+  "meta": {
+    "Database": ["elastic-cloud"],
+    "Type":[
+         "Operators"
+      ],
+    "Install time": ["5 minutes"]
+  },
+"deployment_information": {
+  "Operator Project": "NA",
+  "Deployment Namespace": "my-elastic-cloud-eck"
+},
+  "commands": [
+    {
+      "description": "Install Operator",
+      "exec": "kubectl create -f https://operatorhub.io/install/elastic-cloud-eck.yaml"
+    }
+  ],
+  "display": [
+    {
+      "name": "Developer Dashboard",
+      "url": "##DNS.host##/codeserver",
+      "enabled": true
+    }
+  ]
+}
