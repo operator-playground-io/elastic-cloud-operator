@@ -5,9 +5,9 @@
    "footer":"footer.md",
    "tutorials":[
       {
-         "description":" A User Guide for Elastic Cloud Operator",
-         "duration":"30 min",
-         "tutorial_name":"etcd-operator-tutorial.md",
+         "description":" About Elastic Cloud Operator",
+         "duration":"10 min",
+         "tutorial_name":"elastic-cloud-operator-tutorial.md",
          "title":"etcd Operator"
       },
       {
