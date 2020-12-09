@@ -1,0 +1,23 @@
+{
+  "title": "Elastic Cloud Operator",
+  "description": "Elastic Cloud Operator",
+  "logo": "_images/SalesStack.png",
+  "enabled": true,
+  "category_label": [
+    "Operators"
+  ],
+  "document": "data-logging-stack",
+  "stack_id": "elastic-cloud-operator",
+  "type": "stack",
+  "categories": [
+    "Database"
+  ],
+  "is_certified": true,
+  "has_support": true,
+  "has_dataset": false,
+  "has_api": false,
+  "git_url": "https://github.com/operator-playground-io/elastic-cloud-operator.git",
+  "git_commit": "1095792ff8849eff7d95abdc7b1b44afb756c46b",
+  "installTime": "5 minutes",
+  "isStacksSaved": true
+}
