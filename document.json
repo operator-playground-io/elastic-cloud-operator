@@ -17,7 +17,7 @@
   },
 "deployment_information": {
   "Operator Project": "NA",
-  "Deployment Namespace": "my-elastic-cloud-eck"
+  "Deployment Namespace": "operators"
 },
   "commands": [
     {
