@@ -11,10 +11,10 @@
          "title":"etcd Operator"
       },
       {
-         "description":"A User Guide to create an instance of etcd cluster",
+         "description":"A User Guide to create an instance of Elastic Search cluster",
          "duration":"30 min",
-         "tutorial_name":"create_instance_of_etcd_cluster.md",
-         "title":"Tutorial to Create instance of etcd cluster "
+         "tutorial_name":"create_elastic_search_cluster_instance.md",
+         "title":"Tutorial to Create instance of Elastic Search cluster "
       },
       {
          "description":"Add Users and Enable Authentication",
