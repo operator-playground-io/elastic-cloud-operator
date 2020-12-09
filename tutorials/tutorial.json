@@ -13,8 +13,8 @@
       {
          "description":"A User Guide to create an instance of Elastic Search cluster",
          "duration":"30 min",
-         "tutorial_name":"deploy_kibana_instance.md",
-         "title":"Kibana Instance deployment "
+         "tutorial_name":"create_elastic_search_cluster_instance.md",
+         "title":"Elastic Search Cluster Creation "
       },
       {
          "description":"Tutorial to create an instance of Kibana and associate it with Elasticsearch Cluster",
