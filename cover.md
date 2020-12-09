@@ -18,6 +18,4 @@ Supported versions:
 *  Enterprise Search: 7.7+
 *  Beats: 7.0+
 
-Check the [Quickstart](https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-quickstart.html) to deploy your first cluster with ECK.
-
 For general questions, please see the Elastic [forums](https://discuss.elastic.co/c/eck).
