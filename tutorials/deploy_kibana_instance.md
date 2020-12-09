@@ -76,7 +76,7 @@ Now, update nodeport to 30449
 
 ```execute
 kubectl get service kibanainstance-kb-http -n operators --output yaml > /tmp/kb_test1.yaml
-sed -i "s/- nodePort: .*/- nodePort: 30449/g" /tmp/kb_test1.yaml
+sed -i "s/    nodePort: .*/    nodePort: 30449/g" /tmp/kb_test1.yaml
 kubectl patch svc kibanainstance-kb-http -n operators -p "$(cat /tmp/kb_test1.yaml)"
 ```
 Execute below command to get Kibana Service details:
@@ -101,8 +101,8 @@ Click on the <a href="https://##DNS.ip##:30449" target="_blank">https://##DNS.ip
 
 You will see login page like below:
 
-![](_attachments/kibana_localhost.png)
+![](_images/kibana_localhost.png)
 
 Once you logged in , you will see dashboard like below:
 
-![](_attachments/kibana_login.png)
+![](_images/kibana_login.png)
