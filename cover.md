@@ -25,4 +25,14 @@ Supported versions:
 *  Enterprise Search: 7.7+
 *  Beats: 7.0+
 
+### Objective of tutorial
+
+This course provides the handson with Elastic Cloud Operator, including:
+
+- Deploy Elastic Cloud Operator on Kubernetes
+- Deploy an Elasticsearch Cluster
+- Deploy Kibana Cluster
+- Monitor Cluster Health and Creation Progress
+- Access Elastic Search and upgrade deployment
+
 For general questions, please see the Elastic [forums](https://discuss.elastic.co/c/eck).
