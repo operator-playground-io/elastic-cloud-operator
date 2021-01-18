@@ -15,13 +15,12 @@ The example also uses Skaffold which handles the workflow for building, pushing 
 
 It follows a simple modular and MVC pattern. There are 2 folders that are of our interest:
 - k8s :  This contains all the deployment and service yaml for the application. This defines the deployment and exposure of our application.
-- backend: This contains all the backend code made using Node.js (Express). The frontend is built using EJS JavaScript template framework.
+- k8s_elastic :  This contains all the deployment and service yaml for creating an Elastic Search cluster (for example to run the aplication locally).
+
 
 ### Try the example
 
 **step 1:** Create an Elastic Search cluster executing these commands. If you already installed the Elastic Search operator and followed the steps to create an Elastic Search cluster you can skip this step.
-
-### Create Instance of Elastic Search Cluster
 
 *  Create PV before creating the instance 
 
@@ -42,11 +41,13 @@ spec:
     path: "/mnt/data"
 EOF
 ```
+
 *  Execute below command to create the PV
 
 ```execute
 kubectl create -f elastic_pv.yaml -n operators
 ```
+
 *  Execute below command to create yaml file
 
 ```execute
