@@ -23,9 +23,9 @@
          "title":"3: Kibana Instance deployment"
       },
       {
-         "description":"Sample application using Elastic Search cluster",
+         "description":"Sample application using Elastic Search",
          "duration":"10 min",
-         "tutorial_name":"shopping-application-tutorial.md",
+         "tutorial_name":"application-tutorial.md",
          "title":"4: Elastic Search Sample Application"
       }
       

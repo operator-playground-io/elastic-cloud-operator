@@ -107,12 +107,12 @@ kubectl get pods -n operators --selector='elasticsearch.k8s.elastic.co/cluster-n
 
 Get sample code:
 ```execute
-cd /home/student/projects && git clone https://github.com/Andi-Cirjaliu/edge-elasticsearch-shopping.git
+cd /home/student/projects && git clone https://github.com/Andi-Cirjaliu/edge-elasticsearch-songs.git
 ```
 
 Navigate to the example:
 ```execute
-cd edge-elasticsearch-shopping
+cd edge-elasticsearch-songs
 ```
 
 Copy the secrets in the defaule namespace to be able to access the Elastic Search cluster:
