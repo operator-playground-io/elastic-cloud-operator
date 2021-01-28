@@ -83,7 +83,7 @@ You can see that one Pod is in the process of being started:
 kubectl get pods -n operators --selector='elasticsearch.k8s.elastic.co/cluster-name=elasticsearch'
 ```
 
-**Note - Please wait till `Status` should be `Running` and `READY` should be 1/1 , and then proceed further.**
+**Note - Please wait till `STATUS` should be `Running` and `READY` should be `1/1` , and then proceed further.**
 
 * You can run below command to access logs of pods
 
@@ -94,7 +94,7 @@ kubectl logs -f elasticsearch-es-default-0 -n operators | more
 
 *  Get the credentials
 
-A default user named elastic is automatically created with the password stored in a Kubernetes secret:
+A default user named `elastic` is automatically created with the password stored in a Kubernetes secret:
 
 ```execute
 PASSWORD=$(kubectl get secret elasticsearch-es-elastic-user -n operators -o=jsonpath='{.data.elastic}' | base64 --decode)
