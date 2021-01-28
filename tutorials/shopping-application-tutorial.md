@@ -1,4 +1,3 @@
-```
 ---
 title: Elastic Search Operator Sample Application Tutorial
 description: This tutorial explains how to use an Elastic Search cluster created by the operator in an application.
