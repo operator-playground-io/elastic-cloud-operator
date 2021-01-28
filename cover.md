@@ -15,7 +15,7 @@ Elastic Cloud on Kubernetes automates the deployment, provisioning, management, 
 
 ### Elastic Cloud Operator Architectural Flow
 
-To create elastic-cloud user need to install olm and deploy elastic cloud operator on kubernetes. Elastic cloud operator is used to create instances and with help of kibana we can access elastic cloud. These instances will be used by external applications
+Elastic cloud operator is used to create instances and with help of kibana we can access elastic cloud. These instances will be used by external applications
 
 ![](_images/eck_arch.png)
 
