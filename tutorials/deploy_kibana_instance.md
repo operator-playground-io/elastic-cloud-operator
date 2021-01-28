@@ -60,7 +60,7 @@ Sample output:
 NAME                                 READY   STATUS    RESTARTS   AGE
 kibanainstance-kb-66f574459f-vvbx8   1/1     Running   0          91s
 ```
-**Note - Please wait till `Status` should be `Running` and `READY` should be 1/1 , and then proceed further.**
+**Note - Please wait till `STATUS` should be `Running` and `READY` should be `1/1` , and then proceed further.**
 
 ### Access Kibana
 
@@ -106,6 +106,12 @@ You will see login page like below:
 
 ![](_images/kibana_localhost.png)
 
-Once you logged in , you will see dashboard like below:
+Once you logged in , you will see the dashboard like below:
+
+![](_images/kibana_get_started.png)
+
+Click on `Explore on my own`.
+
+You will see dashboard like below:
 
 ![](_images/kibana_login.png)
