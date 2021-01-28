@@ -85,9 +85,9 @@ kubectl get pods -n operators --selector='elasticsearch.k8s.elastic.co/cluster-n
 
 **Note - Please wait till `Status` should be `Running` and `READY` should be 1/1 , and then proceed further.**
 
-# You can run below command to access logs of pods
+* You can run below command to access logs of pods
 
-```
+```execute
 kubectl logs -f elasticsearch-es-default-0 -n operators | more
 ```
 
