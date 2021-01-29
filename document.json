@@ -16,7 +16,7 @@
     "Install time": ["5 minutes"]
   },
 "deployment_information": {
-  "Operator Project": "NA",
+  "Operator Project": "N/A",
   "Deployment Namespace": "operators"
 },
   "commands": [
