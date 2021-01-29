@@ -21,7 +21,7 @@ spec:
 EOF
 ```
 
-Execute below command to create kibana instance
+Execute below command to create Kibana instance
 
 ```execute
 kubectl create -f kibana_instance.yaml -n operators
@@ -106,7 +106,7 @@ You will see login page like below:
 
 ![](_images/kibana_localhost.png)
 
-Once you logged in , you will see the dashboard like below:
+Once you logged in , you will see the below page:
 
 ![](_images/kibana_get_started.png)
 
