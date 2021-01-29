@@ -15,7 +15,7 @@ Elastic Cloud on Kubernetes automates the deployment, provisioning, management, 
 
 ### Elastic Cloud Operator Architectural Flow
 
-Elastic cloud operator is used to create instances and with help of kibana we can access elastic cloud. These instances will be used by external applications
+Elastic cloud operator is used to create instances and with help of Kibana we can access elastic cloud. These instances will be used by external applications
 
 ![](_images/eck_arch.png)
 
@@ -29,12 +29,12 @@ Elastic cloud operator is used to create instances and with help of kibana we ca
 
 ### Objective of tutorial
 
-This course provides the handson with Elastic Cloud Operator, including:
+This course provides the hands-on with Elastic Cloud Operator, including:
 
 - Deploy Elastic Cloud Operator on Kubernetes
 - Deploy an Elasticsearch Cluster
 - Deploy Kibana Cluster
 - Monitor Cluster Health and Creation Progress
-- Access Elastic Search and upgrade deployment
+- Access Elasticsearch and upgrade deployment
 
 For general questions, please see the Elastic [forums](https://discuss.elastic.co/c/eck).
