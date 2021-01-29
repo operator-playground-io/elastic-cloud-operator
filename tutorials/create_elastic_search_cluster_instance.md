@@ -1,9 +1,9 @@
 ---
-title: Tutorial to create an instance of Elastic Search cluster
-description: This tutorial explains how to create an instance of Elastic Search cluster
+title: Tutorial to create an instance of Elasticsearch cluster
+description: This tutorial explains how to create an instance of Elasticsearch cluster
 ---
 
-### Create Instance of Elastic Search Cluster
+### Create Instance of Elasticsearch Cluster
 
 *  Create PV before creating the instance 
 
@@ -67,7 +67,7 @@ kubectl get pods -n operators | egrep -i "name|elasticsearch"
 ```
 
 
-It may take up to a few minutes until all the resources are created and the cluster is ready for use. Status should be `running` and READY should be `1/1` .
+It may take up to a few minutes until all the resources are created and the cluster is ready for use. `STATUS` should be `Running` and `READY` should be `1/1` .
 
 *  Execute below command to check the health of current ElasticSearch Cluster
 
