@@ -11,10 +11,10 @@
          "title":"1: Elastic Cloud Operator Status Check"
       },
       {
-         "description":"A User Guide to create an instance of Elastic Search cluster",
+         "description":"A User Guide to create an instance of Elasticsearch cluster",
          "duration":"30 min",
          "tutorial_name":"create_elastic_search_cluster_instance.md",
-         "title":"2: Elastic Search Cluster Creation "
+         "title":"2: Elasticsearch Cluster Creation "
       },
       {
          "description":"Tutorial to create an instance of Kibana and associate it with Elasticsearch Cluster",
@@ -23,10 +23,10 @@
          "title":"3: Kibana Instance deployment"
       },
       {
-         "description":"Sample application using Elastic Search",
+         "description":"Sample application using Elasticsearch",
          "duration":"10 min",
          "tutorial_name":"application-tutorial.md",
-         "title":"4: Elastic Search Sample Application"
+         "title":"4: Elasticsearch Sample Application"
       }
       
    ],
