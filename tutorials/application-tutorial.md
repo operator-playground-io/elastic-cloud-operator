@@ -1,6 +1,6 @@
 ---
-title: Elastic Search Operator Sample Application Tutorial
-description: This tutorial explains how to use an Elastic Search cluster created by the operator in an application.
+title: Elasticsearch Operator Sample Application Tutorial
+description: This tutorial explains how to use an Elasticsearch cluster created by the operator in an application.
 ---
 
 ### Introduction
@@ -14,12 +14,12 @@ The example also uses Skaffold which handles the workflow for building, pushing 
 
 It follows a simple modular and MVC pattern. There are 2 folders that are of our interest:
 - k8s :  This contains all the deployment and service yaml for the application. This defines the deployment and exposure of our application.
-- k8s_elastic :  This contains all the deployment and service yaml for creating an Elastic Search cluster (for example to run the aplication locally).
+- k8s_elastic :  This contains all the deployment and service yaml for creating an Elasticsearch cluster (for example to run the application locally).
 
 
 ### Try the example
 
-**step 1:** Create an Elastic Search cluster executing these commands. If you already installed the Elastic Search operator and followed the steps to create an Elastic Search cluster you can skip this step.
+**Step 1:** Create an Elasticsearch cluster executing these commands. If you already installed the Elasticsearch operator and followed the steps to create an Elasticsearch cluster you can skip this step.
 
 *  Create PV before creating the instance 
 
@@ -85,7 +85,7 @@ kubectl get pods -n operators | egrep -i "name|elasticsearch"
 ```
 
 
-It may take up to a few minutes until all the resources are created and the cluster is ready for use. Status should be `running` and READY should be `1/1` .
+It may take up to a few minutes until all the resources are created and the cluster is ready for use. Status should be `Running` and READY should be `1/1` .
 
 *  Execute below command to check the health of current ElasticSearch Cluster
 
@@ -103,7 +103,7 @@ kubectl get pods -n operators --selector='elasticsearch.k8s.elastic.co/cluster-n
 
 **Note - Please wait till `Status` should be `Running` and `READY` should be 1/1 , and then proceed further.**
 
-**step 2:** Install the application sample
+**Step 2:** Install the application sample
 
 Get sample code:
 ```execute
@@ -115,7 +115,7 @@ Navigate to the example:
 cd edge-elasticsearch-songs
 ```
 
-Copy the secrets in the defaule namespace to be able to access the Elastic Search cluster:
+Copy the secrets in the default namespace to be able to access the Elasticsearch cluster:
 ```execute
 kubectl get secret elasticsearch-es-elastic-user --namespace=operators --export -o yaml | kubectl apply --namespace=default -f -
 ```
@@ -148,14 +148,14 @@ URL :  http://##DNS.ip##:30200
 
 Go to Developer Dashboard tab, it will provide you with the IDE along with the integrated terminal.  Click on the bottom status bar and select `TERMINAL`. 
 
-k8s folder contains all the manifest files and defines the deployment stategy for the application.
+k8s folder contains all the manifest files and defines the deployment strategy for the application.
 One can execute them using :
 
 ```execute
 kubectl apply -f k8s/
 ```
 
-In this example , we use `Skaffold` which simplifies local devlopment. You can deploy the application is DEV mode which keeps watching for the files changes and on any change, triggers the entire deployment process automatically without the user having to run and manage it manually.
+In this example , we use `Skaffold` which simplifies local development. You can deploy the application is DEV mode which keeps watching for the files changes and on any change, triggers the entire deployment process automatically without the user having to run and manage it manually.
 
 ```execute
 skaffold dev
@@ -164,7 +164,7 @@ skaffold dev
 On exiting the command, Skaffold will automatically destroy all the resources it created with above command.
 
 
-Also, you can use the `skaffold run` to deploy the changes onto kubernetes as a normal mode. In this mode, the resources created remains unless the user deletes them.
+Also, you can use the `skaffold run` to deploy the changes onto Kubernetes as a normal mode. In this mode, the resources created remains unless the user deletes them.
 
 ### Clean up the Kubernetes resources
 
