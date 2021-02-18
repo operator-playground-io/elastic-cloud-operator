@@ -1,6 +1,6 @@
 {
-  "title": "Elastic Cloud Operator",
-  "description": "Elastic Cloud Operator",
+  "title": "Elasticsearch Operator",
+  "description": "Elasticsearch Operator",
   "logo": "_images/SalesStack.png",
   "enabled": true,
   "category_label": [
