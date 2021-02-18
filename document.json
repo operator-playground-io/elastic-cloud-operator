@@ -1,7 +1,7 @@
 {
   "name": "Elastic Cloud Operator",
   "description": "Elastic Cloud Operator",
-  "logo": "_images/elastic-cloud-logo-1.png",
+  "logo": "_images/elastic-logo-1.jpg",
   "has_supporting_content": true,
   "stack_id": "elastic-cloud-operator",
   "type": "stack",
