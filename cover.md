@@ -1,8 +1,8 @@
-<h1 align="center">Elastic Cloud on Kubernetes</h1>
+<h1 align="center">Elasticsearch(ECK) Operator</h1>
 
 ![Logo](_images/logo.png)
 
-Elastic Cloud on Kubernetes automates the deployment, provisioning, management, and orchestration of Elasticsearch, Kibana, APM Server, Enterprise Search, and Beats on Kubernetes based on the operator pattern.
+Elastic Cloud on Kubernetes(ECK) automates the deployment, provisioning, management, and orchestration of Elasticsearch, Kibana, APM Server, Enterprise Search, and Beats on Kubernetes based on the operator pattern.
 
 ### Current features
 
