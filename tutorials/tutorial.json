@@ -25,7 +25,7 @@
       {
          "description":"Sample application using Elasticsearch",
          "duration":"10 min",
-         "tutorial_name":"application-tutorial.md",
+         "tutorial_name":"Sample-application.md",
          "title":"4: Elasticsearch Sample Application"
       }
       

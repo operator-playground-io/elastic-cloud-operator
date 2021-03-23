@@ -5,23 +5,26 @@ description: This tutorial explains how to use an Elasticsearch cluster created 
 
 ### Introduction
 
-Shopping List application is a Node.js application which is deployed as a microservice.
-The example also uses Skaffold which handles the workflow for building, pushing and deploying your application, allowing you to focus on what matters most: writing code.
+In this section, we will discuss Shopping List application which is a Node.js application which is deployed as a microservice. The following example also uses Skaffold, a tool that simplifies operational tasks by providing continuous development for Kubernetes applications. Skaffold handles the workflow for building, pushing and deploying your application, allowing you to save time and focus on what matters most: writing code.
 
 ### Code Structure
 
+The procedure follows a simple modular and MVC pattern.
+
 ![codestructure](_images/shopping-app-structure.png)
 
-It follows a simple modular and MVC pattern. There are 2 folders that are of our interest:
-- k8s :  This contains all the deployment and service yaml for the application. This defines the deployment and exposure of our application.
-- k8s_elastic :  This contains all the deployment and service yaml for creating an Elasticsearch cluster (for example to run the application locally).
+The two folders of our interest are:
+
+-	k8s: This folder contains all the deployment and service yaml files for the application. This also defines the deployment and exposure of our application.
+- k8s_elastic: This folder contains all the deployment and service yaml files for creating an Elasticsearch cluster to run the application locally.
+
 
 
 ### Try the example
 
-**Step 1:** Create an Elasticsearch cluster executing these commands. If you already installed the Elasticsearch operator and followed the steps to create an Elasticsearch cluster you can skip this step.
+**Step-by-step Example**
 
-*  Create PV before creating the instance 
+**Step 1:** Create an Elasticsearch cluster.
 
 ```execute
 cat <<'EOF' >>elastic_pv.yaml
@@ -41,13 +44,16 @@ spec:
 EOF
 ```
 
-*  Execute below command to create the PV
+**Note:** If you have Elasticsearch operator already installed and have followed the steps to create an Elasticsearch cluster, you can skip this step.
+
+-	Before creating the instance, we first create a PersitentVolume (PV) and define the spec in.
+-	Use the command below to create the PV.
 
 ```execute
 kubectl create -f elastic_pv.yaml -n operators
 ```
 
-*  Execute below command to create yaml file
+-	Execute the command below to create a yaml file.
 
 ```execute
 cat <<'EOF' >>elasticsearch_cluster.yaml
@@ -68,54 +74,34 @@ spec:
 EOF
 ```
 
-This small specification causes the operator to deploy a single node Elasticsearch cluster named ElasticSearch . The cluster will automatically have all its communications secured using Transport Layer Security (TLS)
+This small specification causes the operator to deploy a single node Elasticsearch cluster named ElasticSearch. The cluster will automatically have all its communications secured using Transport Layer Security (TLS)
 
-*  Execute below command to create cluster
+This specification lets the operator to deploy a single node Elasticsearch cluster `ElasticSearch`. This cluster will automatically have all its communications secured using Transport Layer Security (TLS).
+
+-	Execute the command below to create your cluster.
 
 ```execute
 kubectl create -f elasticsearch_cluster.yaml -n operators
 ```
 
-The operator automatically creates and manages Kubernetes resources to achieve the desired state of the Elasticsearch cluster. 
+It may take up to a few minutes for the resources to be created and the cluster to be ready for use. Please verify that Status is Running and READY value is 1/1.
 
-*  Execute below command to get status of pods
+The content for step 1 is repeating and matches with previous md file description. PLEASE REFER ABOVE REMARKS FOR THE SAME.
 
-```execute
-kubectl get pods -n operators | egrep -i "name|elasticsearch"
-```
+**Step 2:** Install the Sample Application 
 
+- Get the sample code:
 
-It may take up to a few minutes until all the resources are created and the cluster is ready for use. Status should be `Running` and READY should be `1/1` .
-
-*  Execute below command to check the health of current ElasticSearch Cluster
-
-```execute
-kubectl get elasticsearch -n operators
-```
-
-When you create the cluster, there is no HEALTH status and the PHASE is empty. After a while, the PHASE turns into Ready, and HEALTH becomes green. Health will turn into green only when all pods of that cluster are in `READY` state.
-
-You can see that one Pod is in the process of being started:
-
-```execute
-kubectl get pods -n operators --selector='elasticsearch.k8s.elastic.co/cluster-name=elasticsearch'
-```
-
-**Note - Please wait till `STATUS` should be `Running` and `READY` should be `1/1` , and then proceed further.**
-
-**Step 2:** Install the application sample
-
-Get sample code:
 ```execute
 cd /home/student/projects && git clone https://github.com/Andi-Cirjaliu/edge-elasticsearch-songs.git
 ```
 
-Navigate to the example:
+- Navigate to the example:
 ```execute
 cd edge-elasticsearch-songs
 ```
 
-Copy the secrets in the default namespace to be able to access the Elasticsearch cluster:
+- Copy the secrets in the default namespace to be able to access the Elasticsearch cluster:
 ```execute
 kubectl get secret elasticsearch-es-elastic-user --namespace=operators --export -o yaml | kubectl apply --namespace=default -f -
 ```
@@ -123,12 +109,14 @@ kubectl get secret elasticsearch-es-elastic-user --namespace=operators --export 
 kubectl get secret elasticsearch-es-http-ca-internal --namespace=operators --export -o yaml | kubectl apply --namespace=default -f -
 ```
 
-Setup skaffold default repository to the local one:
+- Setup skaffold default repository to the local one:
 ```execute
 skaffold config set default-repo localhost:5000
 ```
 
-Install and start the sample. To stop and remove the application you will need to follow the steps from **Clean up the Kubernetes resources**.
+Install and start the sample application. To stop and remove the application you will need to follow the steps from Clean up the Kubernetes resources.
+
+**Clean up the Kubernetes resources**.
 ```execute
 skaffold run
 ```

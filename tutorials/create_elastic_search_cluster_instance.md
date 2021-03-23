@@ -1,11 +1,13 @@
 ---
-title: Tutorial to create an instance of Elasticsearch cluster
-description: This tutorial explains how to create an instance of Elasticsearch cluster
+title: Elasticsearch Cluster Instance Creation
+description: How to create an instance of Elasticsearch cluster?
 ---
 
 ### Create Instance of Elasticsearch Cluster
 
-*  Create PV before creating the instance 
+**Step 1:** Create Elasticsearch Cluster Instance
+
+- Before creating an instance, create a persistent volume. To do so, create a file named 'elastic_pv.yaml' in. Edit this file, and enter the below spec in.
 
 ```execute
 cat <<'EOF' >>elastic_pv.yaml
@@ -24,12 +26,14 @@ spec:
     path: "/mnt/data"
 EOF
 ```
-*  Execute below command to create the PV
+
+- Now, execute the command below to create a PersistentVolume (PV).
 
 ```execute
 kubectl create -f elastic_pv.yaml -n operators
 ```
-*  Execute below command to create yaml file
+
+- Run the following command to create a yaml file.
 
 ```execute
 cat <<'EOF' >>elasticsearch_cluster.yaml
@@ -50,9 +54,9 @@ spec:
 EOF
 ```
 
-This small specification causes the operator to deploy a single node Elasticsearch cluster named ElasticSearch . The cluster will automatically have all its communications secured using Transport Layer Security (TLS)
+The spec induces the operator to deploy a single node Elasticsearch cluster named `ElasticSearch`. This cluster will consequently have all its communications secured by virtue of Transport Layer Security (TLS).
 
-*  Execute below command to create cluster
+- Create the Elasticsearch Cluster.
 
 ```execute
 kubectl create -f elasticsearch_cluster.yaml -n operators
@@ -60,53 +64,52 @@ kubectl create -f elasticsearch_cluster.yaml -n operators
 
 The operator automatically creates and manages Kubernetes resources to achieve the desired state of the Elasticsearch cluster. 
 
-*  Execute below command to get status of pods
+-  Execute command below to get the status of pods.
 
 ```execute
 kubectl get pods -n operators | egrep -i "name|elasticsearch"
 ```
 
+Please wait for the resources to be created and the cluster to be ready for use. You should see the STATUS as `Running` and `READY` should be `1/1`.
 
-It may take up to a few minutes until all the resources are created and the cluster is ready for use. `STATUS` should be `Running` and `READY` should be `1/1` .
-
-*  Execute below command to check the health of current ElasticSearch Cluster
+-  Execute below command to check the health of current ElasticSearch Cluster
 
 ```execute
 kubectl get elasticsearch -n operators
 ```
 
-When you create the cluster, there is no HEALTH status and the PHASE is empty. After a while, the PHASE turns into Ready, and HEALTH becomes green. Health will turn into green only when all pods of that cluster are in `READY` state.
+Once a cluster is created, there is no `HEALTH` status displayed and the PHASE is empty. After some time, the `PHASE` state changes to Ready, and the `HEALTH` status becomes green. The `HEALTH` status turns green only when all the pods of that cluster are in `READY` state.
 
-You can see that one Pod is in the process of being started:
+- You can check that the pod is in the process of being started, as below. 
 
 ```execute
 kubectl get pods -n operators --selector='elasticsearch.k8s.elastic.co/cluster-name=elasticsearch'
 ```
 
-**Note - Please wait till `STATUS` should be `Running` and `READY` should be `1/1` , and then proceed further.**
+**Note - Please wait until the STATUS is `Running` and `READY` value is `1/1`, then proceed.**
 
-* You can run below command to access logs of pods
-
+- Access the pod logs by running the following command. 
+ 
 ```execute
 kubectl logs -f elasticsearch-es-default-0 -n operators | more
 ```
 
 
-*  Get the credentials
+* Get the user credentials using the syntax below
 
-A default user named `elastic` is automatically created with the password stored in a Kubernetes secret:
+A default username `elastic` is automatically along with a password that is stored in a Kubernetes secret.
 
 ```execute
 PASSWORD=$(kubectl get secret elasticsearch-es-elastic-user -n operators -o=jsonpath='{.data.elastic}' | base64 --decode)
 echo $PASSWORD
 ```
-You will find output similar below:
+This should result in something like:
 
 ```
 fdqxb7j68pfvj....
 ```
 
-*  Request the Elasticsearch endpoint
+- Request access to Elasticsearch Endpoint from within the Kubernetes cluster.
 
 From inside the Kubernetes cluster:
 
@@ -116,7 +119,7 @@ echo $ClusterIP
 curl -u "elastic:$PASSWORD" -k "https://$ClusterIP:9200"
 ```
 
-You will find output similar below:
+You should see something like:
 
 ```
 {
@@ -138,3 +141,5 @@ You will find output similar below:
 }
 
 ```
+
+You have successfully setup the Elasticsearch Cluster Instance.

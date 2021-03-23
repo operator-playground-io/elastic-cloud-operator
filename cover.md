@@ -6,6 +6,8 @@ Elastic Cloud on Kubernetes(ECK) automates the deployment, provisioning, managem
 
 ### Current features
 
+**Features of ECK Operator**
+
 *  Elasticsearch, Kibana, APM Server, Enterprise Search, and Beats deployments
 *  TLS Certificates management
 *  Safe Elasticsearch cluster configuration & topology changes
@@ -13,28 +15,20 @@ Elastic Cloud on Kubernetes(ECK) automates the deployment, provisioning, managem
 *  Custom node configuration and attributes
 *  Secure settings keystore updates
 
-### Elastic Cloud Operator Architectural Flow
+### Elasticsearch (ECK) Operator Architecture
 
-Elastic cloud operator is used to create instances and with help of Kibana we can access elastic cloud. These instances will be used by external applications
+Elasticsearch operator for Kubernetes is used to create instances. These instances will be used by external applications. An elastic cloud can be accessed with the help of Kibana.
 
 ![](_images/eck_arch.png)
 
+### Objective of the tutorial
 
-### Supported versions
-
-*  Kubernetes 1.12+ or OpenShift 3.11+
-*  Elasticsearch, Kibana, APM Server: 6.8+, 7.1+
-*  Enterprise Search: 7.7+
-*  Beats: 7.0+
-
-### Objective of tutorial
-
-This course provides the hands-on with Elastic Cloud Operator, including:
+This course introduces you to the core concepts of Elastic Cloud Operator and helps you gain hands-on experience by provisioning related services that include:
 
 - Deploy Elastic Cloud Operator on Kubernetes
 - Deploy an Elasticsearch Cluster
-- Deploy Kibana Cluster
+- Deploy a Kibana Cluster
 - Monitor Cluster Health and Creation Progress
 - Access Elasticsearch and upgrade deployment
 
-For general questions, please see the Elastic [forums](https://discuss.elastic.co/c/eck).
+For more information on ECK, see [forums](https://discuss.elastic.co/c/eck).
