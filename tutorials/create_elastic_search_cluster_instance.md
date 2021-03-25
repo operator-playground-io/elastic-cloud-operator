@@ -1,11 +1,11 @@
 ---
-title: Elasticsearch Cluster Instance Creation
+title: Create Instance of Elasticsearch Cluster
 description: How to create an instance of Elasticsearch cluster?
 ---
 
 ### Create Instance of Elasticsearch Cluster
 
-**Step 1:** Create Elasticsearch Cluster Instance
+**Step 1:** Create Instance of Elasticsearch Cluster
 
 - Before creating an instance, create a persistent volume. To do so, create a file named 'elastic_pv.yaml' in. Edit this file, and enter the below spec in.
 
@@ -64,13 +64,13 @@ kubectl create -f elasticsearch_cluster.yaml -n operators
 
 The operator automatically creates and manages Kubernetes resources to achieve the desired state of the Elasticsearch cluster. 
 
--  Execute command below to get the status of pods.
+-  Execute command below to get the status of Pods.
 
 ```execute
 kubectl get pods -n operators | egrep -i "name|elasticsearch"
 ```
 
-Please wait for the resources to be created and the cluster to be ready for use. You should see the STATUS as `Running` and `READY` should be `1/1`.
+**Note:** Please wait until the `STATUS` is `Running` and `READY` value is `1/1` or as per defined instances, and then proceed.
 
 -  Execute below command to check the health of current ElasticSearch Cluster
 
@@ -78,17 +78,17 @@ Please wait for the resources to be created and the cluster to be ready for use.
 kubectl get elasticsearch -n operators
 ```
 
-Once a cluster is created, there is no `HEALTH` status displayed and the PHASE is empty. After some time, the `PHASE` state changes to Ready, and the `HEALTH` status becomes green. The `HEALTH` status turns green only when all the pods of that cluster are in `READY` state.
+Once a cluster is created, there is no `HEALTH` status displayed and the PHASE is empty. After some time, the `PHASE` state changes to Ready, and the `HEALTH` status becomes green. The `HEALTH` status turns green only when all the Pods of that cluster are in `READY` state.
 
-- You can check that the pod is in the process of being started, as below. 
+- You can check that the Pod is in the process of being started, as below. 
 
 ```execute
 kubectl get pods -n operators --selector='elasticsearch.k8s.elastic.co/cluster-name=elasticsearch'
 ```
 
-**Note - Please wait until the STATUS is `Running` and `READY` value is `1/1`, then proceed.**
+**Note:** Please wait until the `STATUS` is `Running` and `READY` value is `1/1` or as per defined instances, and then proceed.
 
-- Access the pod logs by running the following command. 
+- Access the Pod logs by running the following command. 
  
 ```execute
 kubectl logs -f elasticsearch-es-default-0 -n operators | more

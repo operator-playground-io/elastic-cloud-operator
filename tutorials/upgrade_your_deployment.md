@@ -6,7 +6,7 @@ description: This tutorial explains how to upgrade deployment
 
 You can add and modify most elements of the original cluster specification, provided they translate to valid transformations of the underlying Kubernetes resources (e.g. existing volume claims cannot be resized). 
 
-The operator will attempt to apply your changes with minimal disruption to the existing cluster. Meanwhile, you should ensure that the Kubernetes cluster has sufficient resources to accommodate the changes like (extra storage space, sufficient memory and CPU resources to temporarily spin up new pods etc.
+The operator will attempt to apply your changes with minimal disruption to the existing cluster. Meanwhile, you should ensure that the Kubernetes cluster has sufficient resources to accommodate the changes like (extra storage space, sufficient memory and CPU resources to temporarily spin up new Pods etc.
 
 ```execute
 cat << EOF > elasticsearch_cluster.yaml
@@ -33,7 +33,7 @@ EOF
 kubectl apply -f elasticsearch_cluster.yaml -n operators
 ```
 
-- Now you can check the pods status by executing below  the following command:
+- Now you can check the Pods status by executing below  the following command:
 
 ```execute
 kubectl get pods -n operators
@@ -51,4 +51,4 @@ elasticsearch-es-default-4           1/1     Running   0          55s
 kibanainstance-kb-545cb5b6d6-mpvzx   1/1     Running   0          22m
 ```
 
-**Note: Please wait for the STATUS to be `Running` and `READY` value to be `1/1`, then proceed.**
+**Note:** Please wait until the `STATUS` is `Running` and `READY` value is `1/1` or as per defined instances, and then proceed.

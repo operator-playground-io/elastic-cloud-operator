@@ -1,6 +1,6 @@
 ---
 title: Kibana Instance deployment
-description: Tutorial to create an instance of Kibana and associate it with Elasticsearch Cluster
+description: Learn how to create an instance of Kibana and associate it with Elasticsearch Cluster
 ---
 
 ### Create a Kibana Instance
@@ -48,7 +48,7 @@ NAME             HEALTH   NODES   VERSION   AGE
 kibanainstance   green    1       7.4.2     62s
 ```
 
-- Get details about the associated pods using the below command.
+- Get details about the associated Pods using the below command.
 
 ```execute
 kubectl get pod -n operators --selector='kibana.k8s.elastic.co/name=kibanainstance'
@@ -60,7 +60,7 @@ Sample output is given below.
 NAME                                 READY   STATUS    RESTARTS   AGE
 kibanainstance-kb-66f574459f-vvbx8   1/1     Running   0          91s
 ```
-**Note - Please wait until the `STATUS` is `Running` and `READY` value is `1/1`, then proceed.**
+**Note:** Please wait until the `STATUS` is `Running` and `READY` value is `1/1` or as per defined instances, and then proceed.
 
 ### Access Kibana Service
 
