@@ -5,7 +5,7 @@
    "footer":"footer.md",
    "tutorials":[
       {
-         "description":" This tutorial explains check deployment status of elastic cloud operator",
+         "description":"Learn how to check deployment status of elastic cloud operator",
          "duration":"10 min",
          "tutorial_name":"elastic-cloud-operator-tutorial.md",
          "title":"1: Elastic Cloud Operator Status Check"
@@ -17,7 +17,7 @@
          "title":"2: Elasticsearch Cluster Creation "
       },
       {
-         "description":"Tutorial to create an instance of Kibana and associate it with Elasticsearch Cluster",
+         "description":"Learn how to create an instance of Kibana and associate it with Elasticsearch Cluster",
          "duration":"30 min",
          "tutorial_name":"deploy_kibana_instance.md",
          "title":"3: Kibana Instance deployment"
@@ -25,7 +25,7 @@
       {
          "description":"Sample application using Elasticsearch",
          "duration":"10 min",
-         "tutorial_name":"application-tutorial.md",
+         "tutorial_name":"Sample-application.md",
          "title":"4: Elasticsearch Sample Application"
       }
       
