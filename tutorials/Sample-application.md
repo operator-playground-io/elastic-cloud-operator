@@ -93,12 +93,12 @@ The content for step 1 is repeating and matches with previous md file descriptio
 - Get the sample code:
 
 ```execute
-cd /home/student/projects && git clone https://github.com/Andi-Cirjaliu/edge-elasticsearch-songs.git
+cd /home/student/projects && git clone https://github.com/operator-playground-io/elasticsearch-sample.git
 ```
 
 - Navigate to the example:
 ```execute
-cd edge-elasticsearch-songs
+cd elasticsearch-sample
 ```
 
 - Copy the secrets in the default namespace to be able to access the Elasticsearch cluster:
