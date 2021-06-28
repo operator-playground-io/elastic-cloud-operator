@@ -5,7 +5,7 @@ description: This tutorial explains how to use an Elasticsearch cluster created 
 
 ### Introduction
 
-In this section, we will discuss Shopping List application which is a Node.js application which is deployed as a microservice. The following example also uses Skaffold, a tool that simplifies operational tasks by providing continuous development for Kubernetes applications. Skaffold handles the workflow for building, pushing and deploying your application, allowing you to save time and focus on what matters most: writing code.
+In this section, we will discuss Top Spotify songs application which is a Node.js application which is deployed as a microservice. The following example also uses Skaffold, a tool that simplifies operational tasks by providing continuous development for Kubernetes applications. Skaffold handles the workflow for building, pushing and deploying your application, allowing you to save time and focus on what matters most: writing code.
 
 ### Code Structure
 
